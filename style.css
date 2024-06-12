@@ -1,105 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+
+.container {  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-rows: 0.5fr 1.5fr 1.5fr 0.4fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Title-Area Title-Area"
+    "img1 img2"
+    "img3 img4"
+    "bottombar bottombar";
+    background-color: gray;
+    font-family: "Open Sans", sans-serif;
+
+    
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
+.Title-Area { grid-area: Title-Area; 
+  
+ }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
+.img1 { grid-area: img1;  }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
+.img2 { grid-area : img2; }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+.img3 { grid-area: img3; }
 
-section {
-    padding: 2rem;
-    text-align: center;
-}
+.img4 { grid-area: img4; }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-}
+.bottombar { grid-area: bottombar; }
 
-.gallery-item {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    cursor: pointer;
+    
+    
+    
+  
+.Title { grid-area: Title;; 
+  background-color: gray 
 }
+ 
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  
 
-form label, form input, form textarea {
-    margin: 0.5rem 0;
-}
+  div { 
+    border: 1px black solid;
+  }
 
-form button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
+  .Title-Area { grid-area: Title-Area;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
+    text-align: center; 
 }
-
-.lightbox-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover, .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.img1 { 
+  width: 100px;
 }
