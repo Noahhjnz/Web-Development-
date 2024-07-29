@@ -1,0 +1,51 @@
+body {
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  padding: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.image-grid {
+  display: grid;
+  gap: 10px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /* Flexible column width */
+  gap: 10px;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-grid img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  margin: auto;
+}
+
+.Title-Area {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: larger;
+}
+.description {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: larger;
+}
