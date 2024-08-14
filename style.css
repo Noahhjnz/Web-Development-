@@ -5,9 +5,11 @@ body {
   align-items: center;
   height: auto;
   margin: 0;
+  padding: 0;
   color: #fff;
   font-family: Arial, sans-serif;
 }
+
 
 .image-grid {
   display: grid;
@@ -22,6 +24,56 @@ body {
   object-fit: cover;
 }
 
-.Title-Area {
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 10px;
   text-align: center;
+  
 }
+
+header h1 {
+  margin: 0;
+}
+
+.header-link {
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+}
+
+header h3 { 
+  text-align: left;
+}
+
+.nav-left, .nav-right, a:visited, a:active, a:link {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+  color: white;
+}
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 10px;
+  }
+}
+
