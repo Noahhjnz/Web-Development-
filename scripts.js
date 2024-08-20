@@ -5,11 +5,13 @@ textWrapper.innerHTML = textWrapper.textContent.replace(
   "<span class='letter'>$&</span>"
 );
 
-anime.timeline().add({
+anime.timeline()
+.add({
   targets: ".ml6 .letter",
   translateY: ["1.1em", 0],
   translateZ: 0,
   duration: 750,
   delay: (el, i) => 50 * i,
 });
+
 
