@@ -65,12 +65,13 @@ body {
   opacity: 1;
 }
 
+/* header */
 header {
+  display: flex 1;
   background-color: #333;
   color: white;
   padding: 10px 10px;
   text-align: center;
-  
 }
 
 header h1 {
@@ -82,15 +83,110 @@ header h1 {
   font-weight: bold;
 }
 
-header h3 { 
+header h3 {
   text-align: left;
 }
 
-.nav-left, .nav-right, a:visited, a:active, a:link {
-  display: flex;
-  gap: 20px;
+.nav-left,
+.nav-right,
+a:visited,
+a:active,
+a:link {
+  
+  gap: 50px;
   text-decoration: none;
   color: white;
+}
+
+/* From Uiverse.io by david-mohseni */
+
+
+.wrapper {
+  display:flex;
+  align-items: center;
+  list-style: none;
+  height: 50px;
+  width: 50%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: right;
+}
+
+
+.wrapper .icon {
+  position: relative;
+  background: #000000;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
 }
 
 .ml6 {
@@ -113,61 +209,58 @@ header h3 {
   line-height: 1em;
 }
 
-
-
-
 /* Media query for small phones (320px - 480px) */
 @media only screen and (max-width: 480px) {
   .container {
-      padding: 10px;
+    padding: 10px;
   }
 
   .header {
-      padding: 10px;
+    padding: 10px;
   }
 
   header h1 {
-      font-size: 1.8em;
+    font-size: 1.8em;
   }
 
   .nav-left {
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .nav-left a {
-      font-size: 1em;
+    font-size: 1em;
   }
 
   .image-grid a {
-      width: 100%; /* One image per row */
+    width: 100%; /* One image per row */
   }
 }
 
 /* Media query for medium phones (481px - 768px) */
 @media only screen and (max-width: 768px) and (min-width: 481px) {
   .container {
-      padding: 15px;
+    padding: 15px;
   }
 
   .header {
-      padding: 15px;
+    padding: 15px;
   }
 
   header h1 {
-      font-size: 2em;
+    font-size: 2em;
   }
 
   .nav-left {
-      flex-direction: row;
-      gap: 15px;
+    flex-direction: row;
+    gap: 15px;
   }
 
   .nav-left a {
-      font-size: 1.1em;
+    font-size: 1.1em;
   }
 
   .image-grid a {
-      width: calc(50% - 7.5px); /* Two images per row with 7.5px gap */
+    width: calc(50% - 7.5px); /* Two images per row with 7.5px gap */
   }
 }
